@@ -57,4 +57,9 @@ public class PedidoController {
             return ResponseEntity.ok().build();
 
         }
+
+        @GetMapping("/porta")git commit -m "Inclusão do balanceamento das requisições entre as instâncias que estão disponíveis"
+        public String retornaPorta(@Value("${local.server.port}") String porta){
+            return String.format("Requisição respondida pela instância executando na porta %s", porta);
+        }
 }
