@@ -4,6 +4,7 @@ import br.com.alurafood.pedidos.dto.PedidoDto;
 import br.com.alurafood.pedidos.dto.StatusDto;
 import br.com.alurafood.pedidos.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -58,7 +59,7 @@ public class PedidoController {
 
         }
 
-        @GetMapping("/porta")git commit -m "Inclusão do balanceamento das requisições entre as instâncias que estão disponíveis"
+        @GetMapping("/porta")
         public String retornaPorta(@Value("${local.server.port}") String porta){
             return String.format("Requisição respondida pela instância executando na porta %s", porta);
         }
