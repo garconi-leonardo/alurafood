@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="server" />
         <module name="gateway" />
+        <module name="pedidos" />
       </profile>
       <profile name="Annotation profile for pagamentos" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -25,6 +26,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="gateway" options="-parameters" />
       <module name="pagamentos" options="-parameters" />
+      <module name="pedidos" options="-parameters" />
       <module name="server" options="-parameters" />
     </option>
   </component>
